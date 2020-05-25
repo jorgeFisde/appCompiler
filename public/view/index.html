@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compilador</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles/style.css">
+</head>
+
+<body>
+
+    <div class="navigationBar">
+        <div class="titulo">
+            <h1>COMPILADOR</h1>
+        </div>
+        <button class="info" id="hola">i</button>
+    </div>
+    <div class="container">
+        <div class="left">
+            <div class="inputConsulta">
+                <div class="numLinea" id="numLinea">
+                    <pre id="firstV">1</pre>
+                </div>
+                <textarea name="textaArea" id="textArea" spellcheck="false" cols="50" rows="10"></textarea>
+                <button id="ejecutar" class="ejecutar">Run &#9658 </button>
+            </div>
+            <div class="terminal">
+                <h3 class="titulo_terminal"> >. Terminal</h3>
+                <textarea disabled name="text_terminal" id="text_terminal" cols="55" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="right">
+            <div class="restConsulta" id="rest">
+                <h4 class="rest">Resultado.</h4>
+                <table id="table">
+    
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+        <div class="container-Footer" id="info">
+            <div class="img">
+                <img src="/public/img/dascLogo.png" alt="">
+            </div>
+            <div class="presentacion">
+
+                <h4>DESARROLLADORES</h4>
+                <p>Fischer Delgado Jorge Enrique</p>
+                <p>Ibarra Herrera Victor Manuel</p>
+                <p>Meza Tirado Humberto Salvador</p>
+                <H4>MATERIA</H4>
+                <p>Programacion de sistemas</p>
+            </div>
+            <div class="reseived">
+                Derechos reservados &#169;COMPILER
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script src="/public/js/main.js"></script>
+<script type="module" src="/public/js/scannerLex.mjs"></script>
+<script type="module" src="/public/js/tokens.js"></script>
+<script type="module" src="/public/js/parser.mjs"></script>
+
+<script type="module" src="/node_modules/arcsecond/index.mjs"></script>
+
+</html>
