@@ -37,22 +37,22 @@ tArea,addEventListener('keyup',(e)=>{
     }
 })
 
-window.addEventListener('scroll', () => {
-    var scroll = window.scrollY
-    if (scroll > 50) {
-        if (document.querySelector('.navigationBar') != undefined) {
-            document.querySelector('.navigationBar').className = 'navigationBarFixed'
-            document.querySelector('.info').className = 'infoFixed'
-        }
-    } else {
-        if (document.querySelector('.navigationBarFixed') != undefined) {
-            document.querySelector('.navigationBarFixed').className = 'navigationBar'
-            document.querySelector('.infoFixed').className = 'info'
-        }
-    }
-})
+// window.addEventListener('scroll', () => {
+//     var scroll = window.scrollY
+//     if (scroll > 50) {
+//         if (document.querySelector('.navigationBar') != undefined) {
+//             document.querySelector('.navigationBar').className = 'navigationBarFixed'
+//             document.querySelector('.info').className = 'infoFixed'
+//         }
+//     } else {
+//         if (document.querySelector('.navigationBarFixed') != undefined) {
+//             document.querySelector('.navigationBarFixed').className = 'navigationBar'
+//             document.querySelector('.infoFixed').className = 'info'
+//         }
+//     }
+// })
 
-document.getElementById('hola').addEventListener('click', (e) => {
-    e.preventDefault
-    window.scroll(0, document.documentElement.clientHeight)
-})
+// document.getElementById('hola').addEventListener('click', (e) => {
+//     e.preventDefault
+//     window.scroll(0, document.documentElement.clientHeight)
+// })
