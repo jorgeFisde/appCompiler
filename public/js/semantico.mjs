@@ -85,30 +85,53 @@ export default function analisis_semantico(tokens) {
 
             }
 
-            const query = document.getElementById('Query')
+            var query = document.getElementById('Query')
+            const r1 = document.getElementById('tupla')
             if (okay) {
                 console.log(tablas);
-                query.innerHTML = ''
+
+
                 tablas.forEach(data => {
-                    if (data.table == nameT) {
-                        query.innerHTML += `
-                            <tr>
-                                <th>${data.tupla}</th>
-                            </tr>
+                    r1.innerHTML += `
+                                    <th>${data.tupla}</th>                        
                             `
-                        
+                });
+
+                var inter = 0
+                while ( tablas[inter].table != nameT ) {
+                    inter++
+                }
+
+                for (let i = 0; i <= tablas[inter].content_tupla.length; i++) {
+                    query.innerHTML += `
+                            <tr id="${i}">
+
+                            </tr>
+                    `
+                    console.log('tableeeee');
+                    
+                }
+///                                  ARREGLAR ESTA PUTA VRG
+                for (let i = 0; i < tablas.length; i++) {
+                    const tab = tablas[i];
+                    console.log('tableeeeeee2');
+                    
+                    if (tab.table == nameT) {
+                        // for (let k = 0; k < tab.length; k++) {
+                        //     const mich = tab[k];
+                            for (let j = 0; j < tab.content_tupla.length ; j++) {
+
+                                const reng = document.getElementById(`${j}`)
+                                console.log(tab.content_tupla[j]);
+                                
+                                reng.innerHTML += `
+                                        <td>${tab.content_tupla[j]}</td>
+                                `
+                            }
+                       // }
                     }
-                })
+                }
                 
-                tablas.forEach(data => {
-                    if (data.table == nameT) {
-                        query.innerHTML += `
-                            <tr>
-                                <td>${data.content_tupla}</td>
-                            </tr>
-                            `
-                    }
-                })
             }
         }
         if (element.tipo == 'INSERT') {
@@ -176,10 +199,12 @@ export default function analisis_semantico(tokens) {
 
                                 elemento = ment
                                 tablas.forEach(data => {
-                                    if (data.tupla = ment.valor ) {
-                                        data.content_tupla = ment.inside
+                                    if (data.tupla == ment.valor) {
+                                        data.content_tupla.push(ment.inside)
                                     }
                                 });
+                                console.log(tablas);
+
                             }
                         }
                     } else {
@@ -285,7 +310,7 @@ function creacion(consulta) {
                         tablas.push(
                             {
                                 tupla: element.valor,
-                                content_tupla: element.inside,
+                                content_tupla: [],
                                 table: nombretabla
                             }
                         )
@@ -293,7 +318,7 @@ function creacion(consulta) {
 
                 }
                 console.log(tablas);
-                
+
 
 
             }

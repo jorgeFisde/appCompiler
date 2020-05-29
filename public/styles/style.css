@@ -284,6 +284,7 @@ button:focus{
 table {
     background-color: rgb(243, 241, 241);
     border-collapse: collapse;
+    transition-duration: 0.3s;
     width: 100%;
   }
   th{
