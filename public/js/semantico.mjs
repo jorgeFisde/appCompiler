@@ -108,17 +108,15 @@ export default function analisis_semantico(tokens) {
 
                             </tr>
                     `
-                    console.log('tableeeee');
+
                     
                 }
 ///                                  ARREGLAR ESTA PUTA VRG
                 for (let i = 0; i < tablas.length; i++) {
                     const tab = tablas[i];
-                    console.log('tableeeeeee2');
+
                     
                     if (tab.table == nameT) {
-                        // for (let k = 0; k < tab.length; k++) {
-                        //     const mich = tab[k];
                             for (let j = 0; j < tab.content_tupla.length ; j++) {
 
                                 const reng = document.getElementById(`${j}`)
@@ -128,7 +126,6 @@ export default function analisis_semantico(tokens) {
                                         <td>${tab.content_tupla[j]}</td>
                                 `
                             }
-                       // }
                     }
                 }
                 
